@@ -27,6 +27,7 @@ app.get('/message', function (req, res) {
         }
         console.log(data)
         data = data;    
+        data=data.split('Message1,').pop();
         res.send(data)
 
     })
