@@ -20,15 +20,17 @@ var app = express()
 // respond with a message that read from csv file
 app.get('/message', function (req, res) {
     var data = 'welcome';
-    fs.readFile('./solera-l.csv', 'utf8' , (err, data) => {
+    fs.readFile('../ComponentGrid.csv', 'utf8' , (err, data) => {
         if (err) {
           console.error(err)
           return
         }
         console.log(data)
-        data = data;
-        
+        data = data;    
         res.send(data)
-      })
+
+    })
+
+
 })
 app.listen(5252);
